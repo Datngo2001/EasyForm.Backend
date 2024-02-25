@@ -11,4 +11,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\EasyForm.Application\EasyForm.Application.csproj" />
+    <ProjectReference Include="..\EasyForm.Domain\EasyForm.Domain.csproj" />
+    <ProjectReference Include="..\EasyForm.Infrastructure\EasyForm.Infrastructure.csproj" />
+  </ItemGroup>
+
 </Project>
