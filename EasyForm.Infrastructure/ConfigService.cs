@@ -1,5 +1,6 @@
-using EasyForm.Domain.Enums;
+using EasyForm.Domain.Interfaces;
 using EasyForm.Infrastructure.Database;
+using EasyForm.Infrastructure.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,6 +16,8 @@ public static class ConfigService
             var connectionString = configuration.GetConnectionString("easyform");
             options.UseSqlServer(connectionString, sqlOptions => sqlOptions.MigrationsAssembly(typeof(DataContext).Assembly.FullName));
         });
+
+        services.AddScoped<IUserRepository, UserRepository>();
 
         return services;
     }

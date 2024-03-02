@@ -14,8 +14,8 @@ public class UserRepository : IUserRepository
         _dataContext = dataContext;
     }
 
-    public Task<User?> GetByIdAsync(Guid userId)
+    public Task<User?> GetByIdAsync(Guid userId, CancellationToken cancellationToken)
     {
-        return _dataContext.Users.FirstOrDefaultAsync(x => x.Id == userId);
+        return _dataContext.Users.FirstOrDefaultAsync(x => x.Id == userId, cancellationToken);
     }
 }

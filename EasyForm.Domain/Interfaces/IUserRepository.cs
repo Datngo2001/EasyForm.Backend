@@ -4,5 +4,5 @@ namespace EasyForm.Domain.Interfaces;
 
 public interface IUserRepository
 {
-    public Task<User?> GetByIdAsync(Guid userId);
+    public Task<User?> GetByIdAsync(Guid userId, CancellationToken cancellationToken);
 }
