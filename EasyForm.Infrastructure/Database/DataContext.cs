@@ -3,10 +3,11 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EasyForm.Infrastructure.Database;
 
-public class DataContext : DbContext
+public class DataContext : DbContext, IDisposable
 {
     public DbSet<User> Users { get; set; }
-    public DataContext(DbContextOptions options) : base(options)
+
+    public DataContext(DbContextOptions<DataContext> options) : base(options)
     {
     }
 

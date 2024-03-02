@@ -9,7 +9,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "dotnet: build",
-            "program": "${workspaceFolder}/EasyForm.Api/bin/Debug/net7.0/EasyForm.Api.dll",
+            "program": "${workspaceFolder}/EasyForm.Api/bin/Debug/net8.0/EasyForm.Api.dll",
             "args": [],
             "cwd": "${workspaceFolder}",
             "stopAtEntry": false,

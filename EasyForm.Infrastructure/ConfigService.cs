@@ -13,7 +13,7 @@ public static class ConfigService
         services.AddDbContext<DataContext>(options =>
         {
             var connectionString = configuration.GetConnectionString("easyform");
-            options.UseSqlServer(connectionString);
+            options.UseSqlServer(connectionString, sqlOptions => sqlOptions.MigrationsAssembly(typeof(DataContext).Assembly.FullName));
         });
 
         return services;
