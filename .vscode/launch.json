@@ -11,7 +11,7 @@
             "preLaunchTask": "dotnet: build",
             "program": "${workspaceFolder}/EasyForm.Api/bin/Debug/net8.0/EasyForm.Api.dll",
             "args": [],
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceFolder}/EasyForm.Api",
             "stopAtEntry": false,
             "serverReadyAction": {
                 "action": "openExternally",
@@ -21,7 +21,7 @@
                 "ASPNETCORE_ENVIRONMENT": "Development"
             },
             "sourceFileMap": {
-                "/Views": "${workspaceFolder}/Views"
+                "/Views": "${workspaceFolder}/EasyForm.Api//Views"
             }
         }
     ]
